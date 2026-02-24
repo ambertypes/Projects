@@ -1,33 +1,22 @@
+//Runner.java
 //Amber Edmond
 //CPSC 1302
-//Module 3 Assignment 1
-//This program houses the main method that uses the Pet class to store and print information about pets.
+//Module 3 Assignment 2
+//This program houses the main method that uses the Test class to calculate
+// an average test score based on user input.
 
 import java.util.Scanner;
 
 public class Runner {
     public static void main(String[] args) {
-        //Create Pet object with the default constructor
-        Pet p1 = new Pet();
-        //Print the object state
-        System.out.println(p1);
+        //Create Test object with constructor
+        Tests scores1 = new Tests();
 
-        //Create Pet object with the custom constructor
-        Pet p2 = new Pet("Lola", "Cat", 4);
-        //Print the object state
-        System.out.println(p2);
+        //Call the public method getAverage() to calculate test score average based on user input
+        scores1.getAverage();
 
-        //Get user input for the name, type, and age for another Pet object
-        Scanner scanner = new Scanner (System.in);
-        System.out.println("Enter animal type: ");
-        String type = scanner.nextLine();
-        System.out.println("Enter animal name: ");
-        String name = scanner.nextLine();
-        System.out.println("Enter animal age: ");
-        int age = scanner.nextInt();
-        //Create Pet object with the custom constructor and user input
-        Pet p3 = new Pet(name, type, age);
-        //Print the object state
-        System.out.println(p3);
+        //Call toString() to display the formatted average
+        System.out.println("The average of the " + scores1.getCount() + " scores entered is "
+                + scores1.toString() + ".");
     }
 }
